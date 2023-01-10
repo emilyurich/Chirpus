@@ -1,72 +1,122 @@
 body,
-header,
 ul,
-main,
-footer {
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: "Open Sans", sans-serif;
   background-color: #f9fafc;
-  color: #69696a;
-  font-weight: bold;
-  margin: 0;
-  padding: 5px;
+  padding: 20px;
 }
 
-.header {
-  color: black;
-}
-
-header nav ul li {
-  margin-top: 5px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  text-align: center;
-  display: block;
+h1 {
+  font-size: 100%;
 }
 
 li {
   list-style: none;
 }
 
-h2 {
-  color: #000;
+a {
+  color: #69696a;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: -10px;
 }
 
 .accent {
-  background-color: #000;
-  color: #fff;
-  border: 1px solid #000;
-  border-radius: 10px;
-  margin: 10px 0;
-  padding: 2px;
+  background-color: black;
   text-align: center;
+  width: 100%;
+  border-radius: 10px;
+  color: white;
 }
-p {
-  border-left: solid #000;
-  margin-left: 5px;
-  padding: 5px;
+
+main h2 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+main p {
+  margin: 20px 0;
+  color: #69696a;
+}
+
+.call-to-action-text {
+  border-left: 3px solid black;
+  padding-left: 10px;
 }
 
 footer {
-  background-color: rgba(247, 193, 162, 0.7);
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(247, 193, 162, 0.7);
 }
 
-footer ul {
-  background-color: transparent;
-  padding: 0px;
-  margin: 2px;
-  display: inline-flex;
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
+footer p {
+  margin-left: 20px;
 }
-footer ul li {
-  padding-left: 20px;
-  text-align: right;
+
+footer nav ul {
+  display: flex;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  header nav ul {
+    display: flex;
+  }
+
+  main section {
+    display: flex;
+  }
+  main section article {
+    flex: 2;
+  }
+
+  .circles {
+    flex: 1;
+  }
+  main section .circles div {
+    flex: 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    position: absolute;
+  }
+  .pink {
+    background-color: rgba(247, 136, 167, 0.6);
+    right: 60px;
+    top: 100px;
+    height: 200px;
+    width: 200px;
+  }
+  .orange {
+    background-color: rgba(247, 193, 162, 0.7);
+    right: 25px;
+    height: 150px;
+    width: 150px;
+    top: 200px;
+  }
+  .purple {
+    background-color: rgba(207, 130, 213, 0.6);
+    right: 10px;
+    height: 100px;
+    width: 100px;
+  }
 }
